@@ -15,6 +15,9 @@ Use category for checking user-access according to given permission
 
 Navigate routes with http://localhost:8081/*
 
+### POSTMAN Collection link
+https://api.postman.com/collections/8475390-59d64b30-f848-42c9-9ae4-bf47a63b38eb?access_key=PMAT-01GP0WXFNYE0XY1TG48F8WM2CV
+
 ### Here is env simple
 ==========================
 
