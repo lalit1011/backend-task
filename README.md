@@ -11,6 +11,8 @@ After that use below credential to login as admin:
   `email='admin@example.com'`
   `password='123456'`
 
+Use category for checking user-access according to given permission
+
 Navigate routes with http://localhost:8081/*
 
 ### Here is env simple
