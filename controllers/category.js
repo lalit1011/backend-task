@@ -106,13 +106,8 @@ exports.adminFetchAllCategory = (page, limit, { search = 'null', categoryId }) =
       if (category.length === 0) {
         return reject(new Error(`Category not found.`));
       }
-      for (let index = 0; index < category.rows.length; index++) {
-        const categories = category.rows[index].dataValues;
-        // console.log(categories)
-        categories.assetCount = categories.assets.filter(a => a.isDeleted === false).length
-
-      }
-      const response = getPagingDataNew(category, page, limit, 'assets');
+      
+      const response = getPagingDataNew(category, page, limit, 'data');
 
       return resolve(response);
     }).catch((error) => reject(new Error(error)));
