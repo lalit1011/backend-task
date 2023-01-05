@@ -1,0 +1,86 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www && nodemon app.js",
+    "test": "node_modules/mocha/bin/mocha tests/data --timeout 10000",
+    "postinstall": "link-module-alias",
+    "migrate": "npx sequelize-cli db:migrate --env development",
+    "seeds": "npx sequelize-cli db:seed:all",
+    "undo-migrate": "npx sequelize-cli db:migrate:undo:all --env development",
+    "install": "npm run postinstall",
+    "pretest": "node_modules/eslint/bin/eslint.js . --fix"
+  },
+  "_moduleAliases": {
+    "models": "models/",
+    "utilities": "utilities/",
+    "middlewares": "middlewares/",
+    "controllers": "controllers/"
+  },
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "axios": "^0.21.4",
+    "base-path-converter": "^1.0.2",
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "consolidate": "^0.16.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "debug": "^4.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "form-data": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "helmet": "^3.23.3",
+    "jsonwebtoken": "^8.5.1",
+    "link-module-alias": "^1.2.0",
+    "lodash": "^4.17.21",
+    "mime-types": "^2.1.32",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12",
+    "otplib": "^12.0.1",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "path": "^0.12.7",
+    "pg": "^8.7.1",
+    "recursive-fs": "^2.1.0",
+    "request": "^2.88.2",
+    "sequelize": "^6.3.4",
+    "sequelize-cli": "^5.0.0",
+    "sequelize-virtual-fields": "^1.1.0",
+    "shortid": "^2.2.16",
+    "sib-api-v3-sdk": "^8.2.1",
+    "swig-templates": "^2.0.3",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^9.1.0"
+  },
+  "description": "",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://accubits_vaghesh@gitlab.com/accubits/boloroadmin-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/accubits/boloroadmin-backend/issues"
+  },
+  "homepage": "https://gitlab.com/accubits/boloroadmin-backend#readme"
+}
